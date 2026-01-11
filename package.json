@@ -5,12 +5,18 @@
   "license": "ISC",
   "author": "Ansar Ali",
   "type": "commonjs",
-  "main": "Practice.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node Practice.js"
+    "start": "node app.js"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4",
+    "pug": "^3.0.3"
   }
 }

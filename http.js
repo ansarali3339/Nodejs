@@ -33,4 +33,4 @@ res.write('<body><h1>hello from my node.js</h1></body>');
 res.write('</html>');
 res.end();
 });
-server.listen(3000);
+server.listen(2000);
