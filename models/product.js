@@ -21,11 +21,13 @@ module.exports = class Product {
     constructor(title,imageURL,description,price) {
         this.title = title;
         this.imageURL=imageURL;
+         this.price=price;
         this.description=description;
-        this.price=price;
+       
     }
 
     save() {
+        this.id=Math.random().toString();
         getProductFromFile(products => {
             products.push(this);
 
@@ -38,4 +40,11 @@ module.exports = class Product {
     static fetchAll(cb) {
         getProductFromFile(cb);
     }
-};
+
+static findById(id, cb) {
+    getProductFromFile(products => {
+        const product = products.find(p => p.id === id);
+        cb(product);
+    }); 
+}
+    };
